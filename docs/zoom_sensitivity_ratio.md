@@ -17,18 +17,6 @@ And even more importantly, how much it differs depends on your fov.
 
 What this all means is that it's very easy to keep the same cm/360 between different fov's. It is not so easy to keep the same cm/px between different fov's. The best you can do is adjust your sensitivity so it keeps the same cm/px at a certain point.
 
-## Ideal Value
-
-### cm/360 vs cm/px
-
-If you've never thought about it, why do we measure sensitivity with cm/360 (or inches/360) instead of with cm per however many pixels on the screen (which I'll call cm/px from here on out)? Measuring it by angles is fine, but I care more about how much my mouse movement translates to distance on my screen. It's not only more intuitive, it's also more meaningful--I have no clue what a 5 degree movement looks like, but I have a pretty good idea how big 100px is.
-
-The answer to that is two things. First is that different resolutions will have different cm/px values when using the same sensitivity, but we don't really care about that here. The second (that we do care about) is that in any non-orthographic 3d game, our cm/px depends on where we're looking at on the screen. In other words, our cm/px is not uniform.
-
-And even more importantly, how much it differs depends on your fov.
-
-What this all means is that it's very easy to keep the same cm/360 between different fov's. It is not so easy to keep the same cm/px between different fov's. The best you can do is adjust your sensitivity so it keeps the same cm/px at a certain point.
-
 ### Values
 
 The above section matters a lot because scoping in the source engine works by changing your fov. In tf2, the sniper rifle sets your fov to 20 when scoped. If we want our sensitivity to seem consistent when we scope, we're going to have to change our sensitivity.
