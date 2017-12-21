@@ -14,10 +14,12 @@ If you've never thought about it, why do we measure sensitivity with cm/360 (or 
 The answer to that is two things. First is that different resolutions will have different cm/px values when using the same sensitivity, but we don't really care about that here. The second (that we do care about) is that in any non-orthographic 3d game, our cm/px depends on where we're looking at on the screen. In other words, our cm/px is not uniform.
 
 ![comparison at 90 fov](images/zoom_sensitivity_ratio/20deg_90fov.png "90 fov")
+> Comparison of a 20 degree angle showing the screen movement difference of a center reference point and a reference point near the edge, at fov_desired 90. Between the center and near the edge, we have a ratio of 1.86
 
 And even more importantly, how much it differs depends on your fov.
 
 ![comparison at 75 fov](images/zoom_sensitivity_ratio/20deg_75fov.png "75 fov")
+> Comparison of a 20 degree angle showing the screen movement difference of a center reference point and a reference point near the edge, at fov_desired 75. Between the center and near the edge, we have a ratio of 1.45
 
 What this all means is that it's very easy to keep the same cm/360 between different fov's. It is not so easy to keep the same cm/px between different fov's. The best you can do is adjust your sensitivity so it keeps the same cm/px at a certain point.
 
