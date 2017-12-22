@@ -1,6 +1,6 @@
 # Conditionals
 
-Source scripting has no if statements, which are a basic backbone of most programming and scripting language. This makes a lot of people confused and have no clue how to do anything advanced within tf2 scripts.
+Source scripting has no if statements, which are a basic backbone of most programming and scripting languages. This makes a lot of people confused and have no clue how to do anything advanced within tf2 scripts. Which is completely fair, since not using if statements is not intuitive in the slightest.
 
 Conditional logic can be done, however. Changing aliases allows for conditional logic (and in fact, is turing complete) with some effort. For example:
 
@@ -56,7 +56,7 @@ alias print_bool "true"
 bind a "alias print_bool true"
 bind b "alias print_bool false"
 
-// evaulate
+// evaluate
 alias true "echo true"
 alias false "echo false"
 print_bool
