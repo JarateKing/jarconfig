@@ -21,3 +21,15 @@ alias print_words "echo words"
 // make it appear in the dropdown menu, with a description
 setinfo print_words "   prints out words to console"
 ```
+
+Unfortunately setinfo's cvar names don't support as many characters as aliases do. Most importantly, setinfo doesn't allow + or - to appear in its names, when they're a valuable feature of aliases.
+
+This may be bypassed by having the description note that it's a +/- command, since the description can contain any characters. For example:
+```
+// alias to use
+alias +print_words "echo more"
+alias -print_words "echo words"
+
+// make it appear in the dropdown menu, with a description
+setinfo print_words "   +/- command"
+```
