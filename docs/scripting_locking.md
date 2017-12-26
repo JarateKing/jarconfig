@@ -12,3 +12,11 @@ alias explode ""
 // prevent changing fov
 alias fov_desired ""
 ```
+
+## Notes
+
+The most common uses for this are to prevent servers from running potentially malicious commands, and if a mod requires certain commands to run.
+
+These last as long as the game is running, and can only be undone by restarting the game.
+
+As well, locking the alias command prevents locking anything else, and must be the last thing locked.
