@@ -11,3 +11,13 @@ alias print_words "echo words"
 // make it appear in the dropdown menu
 setinfo print_words ""
 ```
+
+If a command should have a description with it, setinfo's second argument also appears in the dropdown menu and that could be used, like so:
+
+```
+// alias to use
+alias print_words "echo words"
+
+// make it appear in the dropdown menu, with a description
+setinfo print_words "   prints out words to console"
+```
