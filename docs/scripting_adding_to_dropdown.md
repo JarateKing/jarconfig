@@ -12,6 +12,8 @@ alias print_words "echo words"
 setinfo print_words ""
 ```
 
+![demonstration](images/setinfo/console_example.png "demonstration")
+
 If a command should have a description with it, setinfo's second argument also appears in the dropdown menu and that could be used, like so:
 
 ```
