@@ -33,3 +33,13 @@ alias cheat_2 "sv_cheats 1; addcond 3; wait 5; sv_cheats 0"
 
 // good script, sv_cheats will be the right value after
 alias cheat_2 "incrementvar sv_cheats -1 2 1; addcond 3; wait 5; incrementvar sv_cheats -1 2 -1"
+
+## multiplication
+
+Similar to addition, multiplication can be performed with the multvar command. It takes the form:
+
+```
+incrementvar cvar min max factor
+```
+
+Similarly, min and max clamp the values, and all three min, max, and factor can be any real number.
