@@ -59,3 +59,11 @@ multvar cl_crosshair_red -255 255 -1; incrementvar cl_crosshair_red -255 255 255
 multvar cl_crosshair_green -255 255 -1; incrementvar cl_crosshair_green -255 255 255
 multvar cl_crosshair_blue -255 255 -1; incrementvar cl_crosshair_blue -255 255 255
 ```
+
+## Notes
+
+* Negative 0 is a valid number.
+
+* While setting a command can preserve as many significant figures as the input had, incrementvar and multvar only preserve 6 digits after the decimal point.
+
+* Multiplying cvars with decimals with large numbers may result in odd decimal numbers appearing. For most cvars, this won't cause any significant loss of accuracy.
