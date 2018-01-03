@@ -1,4 +1,10 @@
-# addition
+# Cvar math
+
+Some basic operations can be performed on the values stored by cvars.
+
+Obviously, this will only work well if the value stored in that cvar is a number. Otherwise, attempting math on them will treat them as if their value was 0 originally, and continue from there.
+
+## addition
 
 Addition can be performed with the incrementvar command. It takes the form of:
 
