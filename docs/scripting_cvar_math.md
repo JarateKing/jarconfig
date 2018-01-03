@@ -43,3 +43,19 @@ incrementvar cvar min max factor
 ```
 
 Similarly, min and max clamp the values, and all three min, max, and factor can be any real number.
+
+## inverting a value
+
+If a cvar's logical inversion is just the negative version, inverting it is easy. For example:
+
+```
+multvar sensitivity -100 100 -1
+```
+
+More often a cvar's valid range is between 0 and some other value, so simply multiplying by -1 won't be enough. For example, to invert the crosshair's color (which uses three cvars for each color channel, each 0-255):
+
+```
+multvar cl_crosshair_red -255 255 -1; incrementvar cl_crosshair_red -255 255 255
+multvar cl_crosshair_green -255 255 -1; incrementvar cl_crosshair_green -255 255 255
+multvar cl_crosshair_blue -255 255 -1; incrementvar cl_crosshair_blue -255 255 255
+```
