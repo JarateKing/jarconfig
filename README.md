@@ -21,3 +21,9 @@ Install jarconfig into the cfg folder and avoiding the custom folder.
 2. Make a backup of tf2's cfg folder
 3. Copy the contents of the zip file's cfg folder into tf2's cfg folder
 4. Customize custom.cfg to suit your needs
+
+### Customizing custom.cfg
+
+Custom.cfg contains the core of jarconfig, options for its scripts, an example setup, and space for custom options.
+
+It's not recommended to copy over your autoexec completely, since it may include binds or settings that would cause unpredictable problems with jarconfig. Instead, it's recommended to recreate your autoexec using your old one as a reference. This way you can make sure that you're getting full usage of jarconfig.
