@@ -1,7 +1,6 @@
 # jarconfig
-config for tf2 designed to provide additional functions and make scripting easier
 
-notably, this is not a graphics config
+A scripting suite for tf2 designed to provide many common scripts and functions in a unified environment. Unlike graphics cfgs or player cfgs, jarconfig provides new commands and functions to use and integrates many different features into scripts.
 
 ## Install Instructions
 
