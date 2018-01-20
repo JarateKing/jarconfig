@@ -35,3 +35,10 @@ alias -print_words "echo words"
 // make it appear in the dropdown menu, with a description
 setinfo print_words "   +/- command"
 ```
+
+It is worth noting as well, that in very specific cases involving hidden commands that take the form of "command number" they can't be used with setinfo. Instead of working as expected and running the command, it will set its cvar value to the number argument. The most prominent example:
+```
+// DON'T DO THIS
+// this breaks addcond and makes it unusable
+setinfo addcond ""
+```
