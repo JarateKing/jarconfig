@@ -1,5 +1,9 @@
 # Jarconfig Command List
 
+## Binds
+
+These are commands intended to be bound to keys and used ingame.
+
 ```
 +atk1
 +atk2
