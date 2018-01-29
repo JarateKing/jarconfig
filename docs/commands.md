@@ -58,3 +58,22 @@ destroy_dispenser
 destroy_entrance 
 destroy_exit 
 ```
+
+## Console Commands
+
+These commands are intended to be entered into the console
+
+```
+clear_console 
+fix_all 
+fix_demoreset 
+fix_sound 
+fix_binds 
+fix_hud 
+fix_cheats 
+screenshot_low 
+screenshot_med 
+screenshot_def 
+screenshot_high 
+screenshot_nohud 
+```
