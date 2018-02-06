@@ -70,3 +70,7 @@ print_bool
 alias true "none"
 alias false "none"
 ```
+
+# Variables
+
+Similar to conditionals, there are no readily available data types to use within scripting (cvars do store values like variables should, but they aren't easily accessible within a script to use). However, many data types can be implemented through aliases.
