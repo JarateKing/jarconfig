@@ -89,3 +89,18 @@ alias true "echo var is true"
 alias false "echo var is false"
 bool_var
 ```
+
+This can be extended further to support some basic manipulations.
+
+```
+alias none ""
+
+alias bool_var=true "alias bool_var true; alias invert_bool_var bool_var=false"
+alias bool_var=false "alias bool_var false; alias invert_bool_var bool_var=true"
+bool_var=true
+
+// evaluate
+alias true "echo var is true"
+alias false "echo var is false"
+bool_var
+```
