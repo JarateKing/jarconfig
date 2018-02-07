@@ -70,3 +70,74 @@ print_bool
 alias true "none"
 alias false "none"
 ```
+
+# Variables
+
+Similar to conditionals, there are no readily available data types to use within scripting (cvars do store values like variables should, but they aren't easily accessible within a script to use). However, many data types can be implemented through aliases.
+
+## Booleans
+
+As seen above, boolean variables can be implemented with relative ease.
+
+```
+alias none ""
+
+alias bool_var "true"
+
+// evaluate
+alias true "echo var is true"
+alias false "echo var is false"
+bool_var
+```
+
+This can be extended further to support some basic manipulations.
+
+```
+alias none ""
+
+alias bool_var=true "alias bool_var true; alias invert_bool_var bool_var=false"
+alias bool_var=false "alias bool_var false; alias invert_bool_var bool_var=true"
+bool_var=true
+
+// evaluate
+alias true "echo var is true"
+alias false "echo var is false"
+bool_var
+```
+
+## Integers
+
+Integers are much more complicated to implement than booleans. This is due to the nature of source scripting--every state of an alias must be defined, and every operation to that state must be changed when the state changes. More simply, every possible value of an integer requires a new set of aliases. This means that if you only need it to go up to 5, it wouldn't take much work. However, if you need a number to go up to 10000, the amount of aliases required is very impractical. For example:
+
+```
+alias int_var_0 "echo var is equal to 0"
+alias int_var_1 "echo var is equal to 1"
+alias int_var_2 "echo var is equal to 2"
+alias int_var_3 "echo var is equal to 3"
+alias int_var_4 "echo var is equal to 4"
+
+alias var_increment_0 "int_var=1"
+alias var_increment_1 "int_var=2"
+alias var_increment_2 "int_var=3"
+alias var_increment_3 "int_var=4"
+alias var_increment_4 "int_var=4"
+
+alias var_decrement_0 "int_var=0"
+alias var_decrement_1 "int_var=0"
+alias var_decrement_2 "int_var=1"
+alias var_decrement_3 "int_var=2"
+alias var_decrement_4 "int_var=3"
+
+alias int_var=0 "alias int_var int_var_0; alias var_increment var_increment_0; alias var_decrement var_decrement_0"
+alias int_var=1 "alias int_var int_var_1; alias var_increment var_increment_1; alias var_decrement var_decrement_1"
+alias int_var=2 "alias int_var int_var_2; alias var_increment var_increment_2; alias var_decrement var_decrement_2"
+alias int_var=3 "alias int_var int_var_3; alias var_increment var_increment_3; alias var_decrement var_decrement_3"
+alias int_var=4 "alias int_var int_var_4; alias var_increment var_increment_4; alias var_decrement var_decrement_4"
+
+int_var=0
+
+// evaluate
+int_var
+var_increment
+int_var
+```
