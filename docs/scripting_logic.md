@@ -141,3 +141,5 @@ int_var
 var_increment
 int_var
 ```
+
+In particular, this example would support setting the variable (through int_var=num), adding one (var_increment), subtracting one (var_decrement), and evaluating (int_var). More complicated functionality could be created (for example, it would be very easy to extend it to have var_add_two or var_mult_two in the same way that adding or subtracting by one is done) but this will be sufficient for most uses.
