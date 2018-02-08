@@ -107,7 +107,7 @@ bool_var
 
 ## Integers
 
-Integers are much more complicated to implement than booleans. This is due to the nature of source scripting--every state of an alias must be defined, and every operation to that state must be changed when the state changes. More simply, every possible value of an integer requires a new set of aliases. This means that if you only need it to go up to 5, it wouldn't take much work. However, if you need a number to go up to 10000, the amount of aliases required is very impractical. For example:
+Integers are much more complicated to implement than booleans. This is due to the nature of source scripting--every state of an alias must be defined, and every operation to that state must be changed when the state changes. More simply, every possible value of an integer requires a new set of aliases. This means that if you only need it to go up to 5, it wouldn't take much work. However, if you need a number to go up to 10000, the amount of aliases required is very impractical. For example, creating a variable named var:
 
 ```
 alias int_var_0 "echo var is equal to 0"
@@ -144,7 +144,7 @@ int_var
 
 In particular, this example would support setting the variable (through int_var=num), adding one (var_increment), subtracting one (var_decrement), and evaluating (int_var). More complicated functionality could be created (for example, it would be very easy to extend it to have var_add_two or var_mult_two in the same way that adding or subtracting by one is done) but this will be sufficient for most uses.
 
-More complicated operations can still be done using this with some work. For example, to add a larger number to a variable, we can construct a psuedo-for loop using another variable to add one repeatedly. To demonstrate, let's add 3 to another variable:
+More complicated operations can still be done using this with some work. For example, to add a larger number to a variable, we can construct a psuedo-for loop using another variable to add one repeatedly. To demonstrate, let's add 3 to var using a new variable named add:
 
 ```
 // the variable to add to
