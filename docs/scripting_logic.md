@@ -143,3 +143,63 @@ int_var
 ```
 
 In particular, this example would support setting the variable (through int_var=num), adding one (var_increment), subtracting one (var_decrement), and evaluating (int_var). More complicated functionality could be created (for example, it would be very easy to extend it to have var_add_two or var_mult_two in the same way that adding or subtracting by one is done) but this will be sufficient for most uses.
+
+More complicated operations can still be done using this with some work. For example, to add a larger number to a variable, we can construct a psuedo-for loop using another variable to add one repeatedly. To demonstrate, let's add 3 to another variable:
+
+```
+// the variable to add to
+alias int_var_0 "echo var is equal to 0"
+alias int_var_1 "echo var is equal to 1"
+alias int_var_2 "echo var is equal to 2"
+alias int_var_3 "echo var is equal to 3"
+alias int_var_4 "echo var is equal to 4"
+
+alias var_increment_0 "int_var=1"
+alias var_increment_1 "int_var=2"
+alias var_increment_2 "int_var=3"
+alias var_increment_3 "int_var=4"
+alias var_increment_4 "int_var=4"
+
+alias var_decrement_0 "int_var=0"
+alias var_decrement_1 "int_var=0"
+alias var_decrement_2 "int_var=1"
+alias var_decrement_3 "int_var=2"
+alias var_decrement_4 "int_var=3"
+
+alias int_var=0 "alias int_var int_var_0; alias var_increment var_increment_0; alias var_decrement var_decrement_0"
+alias int_var=1 "alias int_var int_var_1; alias var_increment var_increment_1; alias var_decrement var_decrement_1"
+alias int_var=2 "alias int_var int_var_2; alias var_increment var_increment_2; alias var_decrement var_decrement_2"
+alias int_var=3 "alias int_var int_var_3; alias var_increment var_increment_3; alias var_decrement var_decrement_3"
+alias int_var=4 "alias int_var int_var_4; alias var_increment var_increment_4; alias var_decrement var_decrement_4"
+
+// set up as a loop to increment var
+alias int_add_0 ""
+alias int_add_1 "var_increment; add_decrement; int_add"
+alias int_add_2 "var_increment; add_decrement; int_add"
+alias int_add_3 "var_increment; add_decrement; int_add"
+alias int_add_4 "var_increment; add_decrement; int_add"
+
+alias add_increment_0 "int_add=1"
+alias add_increment_1 "int_add=2"
+alias add_increment_2 "int_add=3"
+alias add_increment_3 "int_add=4"
+alias add_increment_4 "int_add=4"
+
+alias add_decrement_0 "int_add=0"
+alias add_decrement_1 "int_add=0"
+alias add_decrement_2 "int_add=1"
+alias add_decrement_3 "int_add=2"
+alias add_decrement_4 "int_add=3"
+
+alias int_add=0 "alias int_add int_add_0; alias add_increment add_increment_0; alias add_decrement add_decrement_0"
+alias int_add=1 "alias int_add int_add_1; alias add_increment add_increment_1; alias add_decrement add_decrement_1"
+alias int_add=2 "alias int_add int_add_2; alias add_increment add_increment_2; alias add_decrement add_decrement_2"
+alias int_add=3 "alias int_add int_add_3; alias add_increment add_increment_3; alias add_decrement add_decrement_3"
+alias int_add=4 "alias int_add int_add_4; alias add_increment add_increment_4; alias add_decrement add_decrement_4"
+
+int_var=0
+int_add=3
+
+int_add
+int_var
+```
