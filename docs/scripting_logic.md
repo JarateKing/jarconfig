@@ -205,3 +205,29 @@ int_add
 // evaluate & see if our additon worked
 int_var
 ```
+
+By removing unnecessary operations, a for loop pattern can be simplified to:
+
+```
+// basic variable setup
+alias int_forloop_0 ""
+alias int_forloop_1 "forloop_iter"
+alias int_forloop_2 "forloop_iter"
+alias int_forloop_3 "forloop_iter"
+alias int_forloop_4 "forloop_iter"
+alias forloop_iter "forloop_op; forloop_decrement; int_forloop"
+alias forloop_decrement_0 "int_forloop=0"
+alias forloop_decrement_1 "int_forloop=0"
+alias forloop_decrement_2 "int_forloop=1"
+alias forloop_decrement_3 "int_forloop=2"
+alias forloop_decrement_4 "int_forloop=3"
+alias int_forloop=0 "alias int_forloop int_forloop_0; alias add_decrement add_decrement_0"
+alias int_forloop=1 "alias int_forloop int_forloop_1; alias add_decrement add_decrement_1"
+alias int_forloop=2 "alias int_forloop int_forloop_2; alias add_decrement add_decrement_2"
+alias int_forloop=3 "alias int_forloop int_forloop_3; alias add_decrement add_decrement_3"
+alias int_forloop=4 "alias int_forloop int_forloop_4; alias add_decrement add_decrement_4"
+
+// set these to what you want
+alias forloop_op "var_increment"
+int_forloop=3
+```
