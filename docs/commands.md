@@ -34,6 +34,10 @@ medic_faked_masked
 +medic_stop_healing
 +medic_radar
 +medic_ubercharge
++medic_vacc_switch
++medic_vacc_bullet
++medic_vacc_explos
++medic_vacc_flames
 disguise_scout 
 disguise_soldier 
 disguise_pyro 
