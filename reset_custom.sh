@@ -1,5 +1,8 @@
 #!/bin/sh
- 
+
+# Originally made by Rhapsody
+# Modified by JarateKing
+
 # download zip from github
 wget https://github.com/JarateKing/jarconfig/archive/master.zip --no-check-certificate
 # extract zip

@@ -1,5 +1,8 @@
 #!/bin/sh
- 
+
+# Originally made by Rhapsody
+# Modified by JarateKing
+
 # backup files to preserve
 mv "./cfg/custom.cfg" "./custom.cfg"
 # download zip from github
