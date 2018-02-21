@@ -10,7 +10,7 @@ TITLE Downloading Files from Github
 dev\wget.exe https://github.com/JarateKing/jarconfig/archive/master.zip --no-check-certificate
 :: extract zip
 dev\7z.exe x master -y
-:: move folders and files out of jarconfig-master
+:: move custom.cfg out of jarconfig-master
 move "jarconfig-master\cfg\custom.cfg" "cfg"
 :: remove folders and files used in the process
 rmdir /S /Q %repo_name%
