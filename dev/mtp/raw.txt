@@ -1,6 +1,3 @@
-// modified from https://gamebanana.com/scripts/7692
-VisionFilterShadersMapWhitelist
-{
 "119snip_tf2_b1.bsp" "1"
 "1cp_orange_x3_minecraft_june_v5.bsp" "1"
 "1FortDevTest.bsp" "1"
@@ -12211,4 +12208,3 @@ VisionFilterShadersMapWhitelist
 "ztn3tourney2.bsp" "1"
 "zuhhh_tf.bsp" "1"
 "zzz.bsp" "1"
-} 
