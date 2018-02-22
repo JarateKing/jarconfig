@@ -4,7 +4,7 @@ A scripting suite for tf2 designed to provide many common scripts and functions 
 
 ## Install Instructions
 
-### Standard Install:
+### Standard Install
 
 Install jarconfig directly into the custom folder. This is the easiest and cleanest way.
 
@@ -27,10 +27,9 @@ Custom.cfg contains the core of jarconfig, options for its scripts, an example s
 
 It's not recommended to copy over your autoexec completely, since it may include binds or settings that would cause unpredictable problems with jarconfig. Instead, it's recommended to recreate your autoexec using your old one as a reference. This way you can make sure that you're getting full usage of jarconfig.
 
-
 ### Updating & Reseting
 
-Batch and shell files are included that make updating and reseting easy.
+Batch and shell files are included that make updating and reseting easy. As a warning, these files should not be moved outside of their default location.
 
 #### update_from_github.bat/.sh
 
