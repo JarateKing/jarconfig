@@ -30,3 +30,7 @@ The mtp.cfg within jarconfig tries to contain every map. This may cause issues o
 {
 }
 ```
+
+## jarconfig tools
+
+Jarconfig includes a python script to generate a list of maps, and a shell script to turn that list of maps into a proper and well-formatted mtp.cfg.
