@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# generated mtp.cfg based off of a raw list of maps
+# maps must be in `"mapname.bsp" "1"` format
+# created by JarateKing
+
 # sort list
 sort raw.txt > sorted.txt
 # safety: remove duplicate lines
