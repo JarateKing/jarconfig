@@ -1,8 +1,8 @@
 # mtp.cfg
 
-Map whitelist for pyrovision. Maps can be added to this cfg to allow more maps to see the effects of pyrovision. Any map, including custom maps, can be added to this cfg file.
+Map whitelist for pyrovision. Maps can be added to this cfg to allow more maps to see the effects of pyrovision. Despite requiring editing this file to enable its effects, most maps have partial support for pyrovision. Any map, including custom maps, can be added to this cfg file.
 
-The mtp.cfg within jarconfig tries to contain every map. This may cause issues or visual bugs on certain maps.
+The mtp.cfg within jarconfig tries to contain as many maps as possible, including a large amount of custom maps. This may cause issues or visual bugs on certain maps, or may seem to have no effect on others, but will work on the majority.
 
 ## Default
 
@@ -30,3 +30,11 @@ The mtp.cfg within jarconfig tries to contain every map. This may cause issues o
 {
 }
 ```
+
+## jarconfig tools
+
+Jarconfig includes a python script to generate a list of maps, and a shell script to turn that list of maps into a proper and well-formatted mtp.cfg. These are intended to be used on linux.
+
+The python script checks what maps servers are running, and if it doesn't exist in the pre-existing list, it gets added to the file. As servers go up / down, and change maps fairly frequently, it repeats this until the script is stopped.
+
+The shell script sorts the list, removes duplicate or erroneous lines, and updates mtp.cfg to use the added maps.
