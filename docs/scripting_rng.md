@@ -23,3 +23,4 @@ alias rand_mod rand_mod0
 rand_mod
 ```
 
+This example as it is will only cycle between yes and no. To further improve it, rand_mod should be added to common binds like movement keys.
