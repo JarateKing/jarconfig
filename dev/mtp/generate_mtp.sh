@@ -4,6 +4,8 @@
 # maps must be in `"mapname.bsp" "1"` format
 # created by JarateKing
 
+# create non-workshop versions
+python ./generate_nonworkshop.py
 # sort list
 sort raw.txt > sorted.txt
 # safety: remove duplicate lines
