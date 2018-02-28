@@ -31,3 +31,5 @@ bind a "+moveleft; rand_mod"
 bind s "+back; rand_mod"
 bind d "+moveright; rand_mod"
 ```
+
+Note that the above will work best when the player only occasionally uses the random function, and will press the movement keys much more often. If the player uses the random function more often than they move, it can become very easy to predict.
