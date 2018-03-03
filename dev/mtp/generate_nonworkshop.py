@@ -3,11 +3,11 @@
 # finds workshop maps in a file and appends their non-workshop versions
 # created by JarateKing
 
+# regex
 import re
 
-maplist = []
-
 # get list of workshop maps
+maplist = []
 f = open("raw.txt","r")
 for line in f:
 	if bool(re.search('workshop\/', line)):

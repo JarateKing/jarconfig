@@ -4,13 +4,13 @@
 # appends them to an existing list, if it's not already there
 # created by JarateKing
 
+# source server queries library
 import valve.source
 import valve.source.a2s
 import valve.source.master_server
 
-existing = []
-
 # get list of maps already present
+existing = []
 f = open("raw.txt","r")
 for line in f:
     existing.append(line)
