@@ -33,4 +33,8 @@ This redownloads everything from github, keeping only custom.cfg.
 
 ### reset_custom.bat/.sh
 
-This redownloads custom.cfg and replaces it. This is for when you would like to return custom.cfg to its original form. Note that running this when being a few updates too old can cause issues, and it's recommended to update along with this. 
+This redownloads custom.cfg and replaces it. This is for when you would like to return custom.cfg to its original form. Note that running this when being a few updates too old can cause issues, and it's recommended to update along with this.
+
+## Installing with Mastercoms' Mastercomfig.
+
+Jarconfig supports relatively simple integration with mastercomfig. It can be found [here](https://github.com/mastercoms/mastercomfig).
