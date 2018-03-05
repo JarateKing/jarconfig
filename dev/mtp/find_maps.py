@@ -20,8 +20,12 @@ f.close()
 while True:
     with valve.source.master_server.MasterServerQuerier(timeout=10) as msq:
         try:
+
+            # Given the master server, query all servers running tf2
             for address in msq.find(region=[u"all"], gamedir=u"tf"):
                 try:
+
+                    # Given a server, find out what map it's running and append it
                     with valve.source.a2s.ServerQuerier(address, 1) as server:
                         info = server.info()
                         mapline = '"{map}.bsp" "1"'.format(**info)
@@ -31,10 +35,16 @@ while True:
                             f.close()
                             print(mapline)
                             existing.append(mapline + '\n')
+
+                # if the server times out
                 except valve.source.NoResponseError:
                     pass
+        # signify every server has been scanned that passthrough
             print("---")
+
+        # if the master server times out
         except valve.source.NoResponseError:
             print "Master server request timed out!"
+            pass
         except Exception:
             pass
