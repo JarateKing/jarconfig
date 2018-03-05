@@ -10,8 +10,17 @@ TITLE Downloading Files from Github
 dev\wget.exe https://github.com/JarateKing/jarconfig/archive/master.zip --no-check-certificate
 :: extract zip
 dev\7z.exe x master -y
-:: move custom.cfg out of jarconfig-master
+:: move replaced cfgs out of jarconfig-master
 move "jarconfig-master\cfg\custom.cfg" "cfg"
+move "jarconfig-master\cfg\scout.cfg" "cfg"
+move "jarconfig-master\cfg\soldier.cfg" "cfg"
+move "jarconfig-master\cfg\pyro.cfg" "cfg"
+move "jarconfig-master\cfg\demoman.cfg" "cfg"
+move "jarconfig-master\cfg\heavyweapons.cfg" "cfg"
+move "jarconfig-master\cfg\engineer.cfg" "cfg"
+move "jarconfig-master\cfg\medic.cfg" "cfg"
+move "jarconfig-master\cfg\sniper.cfg" "cfg"
+move "jarconfig-master\cfg\spy.cfg" "cfg"
 :: remove folders and files used in the process
 rmdir /S /Q %repo_name%
 del master
