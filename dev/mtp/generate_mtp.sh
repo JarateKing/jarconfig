@@ -1,8 +1,13 @@
 #!/bin/sh
 
 # generated mtp.cfg based off of a raw list of maps
-# maps must be in `"mapname.bsp" "1"` format
 # created by JarateKing
+
+# maps must be in `"mapname.bsp" "1"` format
+# map list must be named raw.txt
+# use find_maps.py to generate the map list
+# find_maps.py should not be running when executing this
+# raw.txt will be modified and overwritten by this
 
 # create non-workshop versions
 python ./generate_nonworkshop.py
@@ -19,5 +24,5 @@ cat cat_start.txt mapsonly.txt cat_end.txt > "../../cfg/mtp.cfg"
 rm raw.txt
 rm sorted.txt
 rm unique.txt
-# make the output become the new base
+# make the output become the new map list
 mv mapsonly.txt raw.txt
