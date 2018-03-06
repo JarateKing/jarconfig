@@ -20,3 +20,8 @@ Updating and reseting can also be done manually.
 2. Download jarconfig from github.
 3. Replace the old jarconfig with the freshly downloaded one.
 4. Move the backup copies of custom.cfg and the class cfg's back into jarconfig.
+
+## Reseting
+
+1. Download jarconfig from github.
+2. Replace custom.cfg and class cfg's with those from github
