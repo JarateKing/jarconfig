@@ -23,18 +23,6 @@ Custom.cfg contains the core of jarconfig, options for its scripts, an example s
 
 It's not recommended to copy over your autoexec completely, since it may include binds or settings that would cause unpredictable problems with jarconfig. Instead, it's recommended to recreate your autoexec using your old one as a reference. This way you can make sure that you're getting full usage of jarconfig.
 
-## Updating & Reseting
-
-Batch and shell files are included that make updating and reseting easy. As a warning, these files should not be moved outside of their default location.
-
-### update_from_github.bat/.sh
-
-This redownloads everything from github, keeping only custom.cfg.
-
-### reset_custom.bat/.sh
-
-This redownloads custom.cfg and replaces it. This is for when you would like to return custom.cfg to its original form. Note that running this when being a few updates too old can cause issues, and it's recommended to update along with this.
-
 ## Installing with Mastercoms' Mastercomfig.
 
 Jarconfig supports relatively simple integration with mastercomfig. It can be found [here](https://github.com/mastercoms/mastercomfig).
@@ -42,4 +30,4 @@ Jarconfig supports relatively simple integration with mastercomfig. It can be fo
 1. Install mastercomfig as its instructions say, using any method.
 2. If mastercomfig was installed using the folders method, edit its autoexec.cfg to exec custom.cfg (this should be near the bottom of autoexec.cfg). If installed using vpk's, you don't have to do this step.
 3. Install jarconfig using the standard install method.
-4. Inside jarconfig, remove autoexec.cfg.
+4. Inside jarconfig, remove autoexec.cfg. 
