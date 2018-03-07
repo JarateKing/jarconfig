@@ -5,3 +5,5 @@ A scripting suite for tf2 designed to provide many common scripts and functions 
 [Install Instructions](/docs/readme/install.md)
 
 [Updating Instructions](/docs/readme/updating.md)
+
+[Uninstall Instructions](/docs/readme/uninstall.md)
