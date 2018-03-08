@@ -7,3 +7,7 @@ A scripting suite for tf2 designed to provide many common scripts and functions 
 [Updating Instructions](/docs/readme/updating.md)
 
 [Uninstall Instructions](/docs/readme/uninstall.md)
+
+---
+
+[License](/docs/readme/LICENSE)
