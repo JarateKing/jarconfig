@@ -30,4 +30,4 @@ Jarconfig supports relatively simple integration with mastercomfig. It can be fo
 1. Install mastercomfig as its instructions say, using any method.
 2. If mastercomfig was installed using the folders method, edit its autoexec.cfg to exec custom.cfg (this should be near the bottom of autoexec.cfg). If installed using vpk's, you don't have to do this step.
 3. Install jarconfig using the standard install method.
-4. Inside jarconfig, remove autoexec.cfg. 
+4. Inside jarconfig, remove autoexec.cfg, the class cfg's, and listenserver.cfg. Keep the class_c cfg's and listenserver_c.cfg though. 
