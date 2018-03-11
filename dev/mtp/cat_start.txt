@@ -1,3 +1,6 @@
 // modified from https://gamebanana.com/scripts/7692
+// with maps from http://fakkelbrigade.eu/maps/
+// and from scanning maps run by servers at the time
+
 VisionFilterShadersMapWhitelist
 {
