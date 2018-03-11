@@ -26,7 +26,7 @@ while True:
                 try:
 
                     # Given a server, find out what map it's running and append it
-                    with valve.source.a2s.ServerQuerier(address, 1) as server:
+                    with valve.source.a2s.ServerQuerier(address, 3) as server:
                         info = server.info()
                         mapline = '"{map}.bsp" "1"'.format(**info)
                         if not mapline + '\n' in existing:
