@@ -38,13 +38,18 @@ while True:
 
                 # if the server times out
                 except valve.source.NoResponseError:
+                    print("--- server did not respond")
+                    pass
+                except Exception:
+                    print("-- server ran into other exceptions")
                     pass
         # signify every server has been scanned that passthrough
             print("---")
 
         # if the master server times out
         except valve.source.NoResponseError:
-            print "Master server request timed out!"
+            print("--- master server request timed out!")
             pass
         except Exception:
+            print("--- master server ran into other exceptions")
             pass
