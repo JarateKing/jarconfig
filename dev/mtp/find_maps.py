@@ -41,7 +41,7 @@ while True:
                     print("--- server did not respond")
                     pass
                 except Exception:
-                    print("-- server ran into other exceptions")
+                    print("--- server ran into other exceptions")
                     pass
         # signify every server has been scanned that passthrough
             print("---")
