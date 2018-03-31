@@ -38,7 +38,6 @@ rmdir /S /Q %repo_name%
 del master
 :: return preserved files
 move "%current_folder%\custom.cfg" "%current_folder%\cfg\"
-move "%current_folder%\custom.cfg" "%current_folder%\cfg\"
 move "%current_folder%\scout.cfg" "%current_folder%\cfg\"
 move "%current_folder%\soldier.cfg" "%current_folder%\cfg\"
 move "%current_folder%\pyro.cfg" "%current_folder%\cfg\"
