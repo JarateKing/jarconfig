@@ -1,5 +1,7 @@
 # Install Instructions
 
+Similar to other cfg's, there are multiple ways to install jarconfig. These are the main methods to install and their instructions.
+
 ## Standard Install
 
 Install jarconfig directly into the custom folder. This is the easiest and cleanest way.
@@ -8,7 +10,7 @@ Install jarconfig directly into the custom folder. This is the easiest and clean
 2. Extract to tf2's custom folder
 3. Customize custom.cfg to suit your needs
 
-## Cfg folder install
+## Cfg folder Install
 
 Install jarconfig into the cfg folder and avoiding the custom folder. This can help with load times, but can be harder to maintain.
 
