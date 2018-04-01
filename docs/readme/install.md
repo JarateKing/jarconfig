@@ -1,5 +1,7 @@
 # Install Instructions
 
+Similar to other cfg's, there are multiple ways to install jarconfig. These are the main methods to install and their instructions.
+
 ## Standard Install
 
 Install jarconfig directly into the custom folder. This is the easiest and cleanest way.
