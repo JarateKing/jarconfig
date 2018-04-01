@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+# checks raw.txt and counts the maps that haven't been commited
+# assumes correct raw.txt format
+# created by JarateKing
+
 start = False
 count = 0
 total = 0
