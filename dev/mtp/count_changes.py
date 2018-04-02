@@ -26,3 +26,4 @@ print('total maps: ' + str(total))
 print('total commited maps: ' + str(total - count))
 print('changes to raw maps: ' + str(count))
 print('changes after commit: ' + str(count * 2))
+print('percent increase: ' + str(100.0 * total / (total - count) - 100) + "%");
