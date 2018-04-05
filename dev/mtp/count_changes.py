@@ -2,6 +2,7 @@
 
 # checks raw.txt and counts the maps that haven't been commited
 # assumes correct raw.txt format
+# slightly under-guesses, because of workshop maps
 # created by JarateKing
 
 start = False
