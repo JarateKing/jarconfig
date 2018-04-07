@@ -2,4 +2,28 @@
 
 This documentation goes over scripting techniques, features of tf2's scripting language, and explanations for certain cvars.
 
-Files beginning with "scripting" are related directly to scripting techniques and features, regardless of their presence in jarconfig.
+## General
+
+* mtp
+* conventions
+* noncfg_files
+
+## Jarconfig specific
+
+* commands
+
+## Scripting techniques
+
+* scripting_adding_to_dropdown
+* scripting_cvar_math
+* scripting_hardcoded_cfgs
+* scripting_hudanims
+* scripting_locking
+* scripting_logic
+* scripting_rng
+* scripting_saving
+* scripting_unicode
+
+## Cvars
+
+* zoom_sensitivity_ratio
