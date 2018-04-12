@@ -8,10 +8,19 @@
 import valve.source
 import valve.source.a2s
 import valve.source.master_server
+import sys
+
+# handle flags
+filename = "raw.txt"
+isErrorReporting = True
+args = sys.argv[1:]
+
+for arg in args:
+    filename = arg
 
 # get list of maps already present
 existing = []
-f = open("raw.txt","r")
+f = open(filename,"r")
 for line in f:
     existing.append(line)
 f.close()
@@ -30,7 +39,7 @@ while True:
                         info = server.info()
                         mapline = '"{map}.bsp" "1"'.format(**info)
                         if not mapline + '\n' in existing:
-                            f = open("raw.txt","a")
+                            f = open(filename,"a")
                             f.write(mapline + '\n')
                             f.close()
                             print(mapline)
