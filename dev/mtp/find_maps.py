@@ -13,11 +13,14 @@ import sys
 # handle flags
 filename = "raw.txt"
 isErrorReporting = True
+isPrinting = True
 args = sys.argv[1:]
 
 for arg in args:
     if arg == "-noerror":
         isErrorReporting = False
+    elif arg == "-silent":
+        isPrinting = False
     else:
         filename = arg
 
@@ -45,27 +48,29 @@ while True:
                             f = open(filename,"a")
                             f.write(mapline + '\n')
                             f.close()
-                            print(mapline)
+                            if isPrinting:
+                                print(mapline)
                             existing.append(mapline + '\n')
 
                 # if the server times out
                 except valve.source.NoResponseError:
-                    if isErrorReporting:
+                    if isErrorReporting and isPrinting:
                         print("--- server did not respond")
                     pass
                 except Exception:
-                    if isErrorReporting:
+                    if isErrorReporting and isPrinting:
                         print("--- server ran into other exceptions")
                     pass
         # signify every server has been scanned that passthrough
-            print("---")
+            if isPrinting:
+                print("---")
 
         # if the master server times out
         except valve.source.NoResponseError:
-            if isErrorReporting:
+            if isErrorReporting and isPrinting:
                 print("--- master server request timed out!")
             pass
         except Exception:
-            if isErrorReporting:
+            if isErrorReporting and isPrinting:
                 print("--- master server ran into other exceptions")
             pass
