@@ -16,7 +16,10 @@ isErrorReporting = True
 args = sys.argv[1:]
 
 for arg in args:
-    filename = arg
+    if arg == "-noerror":
+        isErrorReporting = False
+    else:
+        filename = arg
 
 # get list of maps already present
 existing = []
@@ -47,18 +50,22 @@ while True:
 
                 # if the server times out
                 except valve.source.NoResponseError:
-                    print("--- server did not respond")
+                    if isErrorReporting:
+                        print("--- server did not respond")
                     pass
                 except Exception:
-                    print("--- server ran into other exceptions")
+                    if isErrorReporting:
+                        print("--- server ran into other exceptions")
                     pass
         # signify every server has been scanned that passthrough
             print("---")
 
         # if the master server times out
         except valve.source.NoResponseError:
-            print("--- master server request timed out!")
+            if isErrorReporting:
+                print("--- master server request timed out!")
             pass
         except Exception:
-            print("--- master server ran into other exceptions")
+            if isErrorReporting:
+                print("--- master server ran into other exceptions")
             pass
