@@ -13,6 +13,7 @@ import sys
 # handle flags
 filename = "raw.txt"
 isErrorReporting = True
+isShowingMaps = True
 isPrinting = True
 args = sys.argv[1:]
 
@@ -21,6 +22,8 @@ for arg in args:
         isErrorReporting = False
     elif arg == "-silent":
         isPrinting = False
+    elif arg == "-nomaps":
+        isShowingMaps = False
     else:
         filename = arg
 
@@ -48,7 +51,7 @@ while True:
                             f = open(filename,"a")
                             f.write(mapline + '\n')
                             f.close()
-                            if isPrinting:
+                            if isShowingMaps and isPrinting:
                                 print(mapline)
                             existing.append(mapline + '\n')
 
