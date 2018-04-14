@@ -16,6 +16,14 @@ def printHelp():
     print("Finds new maps found by searching what servers are running")
     print("Appends them to an existing list, if it's not already there")
     print("Created by JarateKing")
+    print("")
+    print("Commandline options")
+    print("-help          | show this message")
+    print("-file filename | uses specified file as base (raw.txt by default)")
+    print("-noerror       | doesn't print error messages")
+    print("-nomaps        | doesn't print found maps")
+    print("-silent        | doesn't print anything")
+    print("-count         | adds a map number to maps printed")
     return
 
 # handle flags
