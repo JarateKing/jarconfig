@@ -15,6 +15,7 @@ filename = "raw.txt"
 isErrorReporting = True
 isShowingMaps = True
 isPrinting = True
+isCounting = False
 args = sys.argv[1:]
 
 for arg in args:
@@ -24,14 +25,18 @@ for arg in args:
         isPrinting = False
     elif arg == "-nomaps":
         isShowingMaps = False
+    elif arg == "-count":
+        isCounting = True
     else:
         filename = arg
 
 # get list of maps already present
 existing = []
+count = 0
 f = open(filename,"r")
 for line in f:
     existing.append(line)
+    count = count + 1
 f.close()
 
 # continuously add new maps found from servers
@@ -52,7 +57,11 @@ while True:
                             f.write(mapline + '\n')
                             f.close()
                             if isShowingMaps and isPrinting:
-                                print(mapline)
+                                if isCounting:
+                                    print(str(count) + ": " + mapline)
+                                    count = count + 1
+                                else:
+                                    print(mapline)
                             existing.append(mapline + '\n')
 
                 # if the server times out
