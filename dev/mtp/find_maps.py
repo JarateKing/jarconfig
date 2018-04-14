@@ -16,7 +16,7 @@ isErrorReporting = True
 isShowingMaps = True
 isPrinting = True
 isCounting = False
-args = sys.argv[1:]
+args = iter(sys.argv[1:])
 
 for arg in args:
     if arg == "-noerror":
@@ -27,8 +27,11 @@ for arg in args:
         isShowingMaps = False
     elif arg == "-count":
         isCounting = True
+    elif arg == "-file":
+        _ = next(args)
+        filename = _
     else:
-        filename = arg
+        print("Unknown argument: " + arg)
 
 # get list of maps already present
 existing = []
