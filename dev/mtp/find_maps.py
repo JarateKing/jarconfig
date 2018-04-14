@@ -10,6 +10,14 @@ import valve.source.a2s
 import valve.source.master_server
 import sys
 
+# help docs function
+def printHelp():
+    "this prints the help message"
+    print("Finds new maps found by searching what servers are running")
+    print("Appends them to an existing list, if it's not already there")
+    print("Created by JarateKing")
+    return
+
 # handle flags
 filename = "raw.txt"
 isErrorReporting = True
@@ -30,6 +38,8 @@ for arg in args:
     elif arg == "-file":
         _ = next(args)
         filename = _
+    elif arg == "-help" or arg == "-h":
+        printHelp()
     else:
         print("Unknown argument: " + arg)
 
