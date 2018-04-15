@@ -10,9 +10,8 @@ import valve.source.a2s
 import valve.source.master_server
 import sys
 
-# help docs function
 def printHelp():
-    "this prints the help message"
+    "prints the help message"
     print("Finds new maps found by searching what servers are running")
     print("Appends them to an existing list, if it's not already there")
     print("Created by JarateKing")
@@ -100,10 +99,12 @@ while True:
                     if isErrorReporting and isPrinting:
                         print("--- server did not respond")
                     pass
+
                 except Exception:
                     if isErrorReporting and isPrinting:
                         print("--- server ran into other exceptions")
                     pass
+
         # signify every server has been scanned that passthrough
             if isPrinting:
                 print("---")
@@ -113,6 +114,7 @@ while True:
             if isErrorReporting and isPrinting:
                 print("--- master server request timed out!")
             pass
+
         except Exception:
             if isErrorReporting and isPrinting:
                 print("--- master server ran into other exceptions")
