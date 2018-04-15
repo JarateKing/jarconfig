@@ -26,6 +26,22 @@ def printHelp():
     print("-count         | adds a map number to maps printed")
     return
 
+def addMap(filename, mapline):
+    "add a mapline to a given file"
+    f = open(filename,"a")
+    f.write(mapline + '\n')
+    f.close()
+    return
+
+def printMap(mapline, isShowingMaps, isPrinting, isCounting, count):
+    "print a mapline"
+    if isShowingMaps and isPrinting:
+        if isCounting:
+            print(str(count) + ": " + mapline)
+        else:
+            print(mapline)
+    return
+
 # handle flags
 filename = "raw.txt"
 isErrorReporting = True
@@ -74,15 +90,9 @@ while True:
                         info = server.info()
                         mapline = '"{map}.bsp" "1"'.format(**info)
                         if not mapline + '\n' in existing:
-                            f = open(filename,"a")
-                            f.write(mapline + '\n')
-                            f.close()
-                            if isShowingMaps and isPrinting:
-                                if isCounting:
-                                    print(str(count) + ": " + mapline)
-                                    count = count + 1
-                                else:
-                                    print(mapline)
+                            count = count + 1
+                            addMap(filename, mapline)
+                            printMap(mapline, isShowingMaps, isPrinting, isCounting, count)
                             existing.append(mapline + '\n')
 
                 # if the server times out
