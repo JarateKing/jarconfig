@@ -23,6 +23,7 @@ def printHelp():
     print("-nomaps        | doesn't print found maps")
     print("-silent        | doesn't print anything")
     print("-count         | adds a map number to maps printed")
+    print("-timeout num   | timeout for servers in seconds (default 3)")
     return
 
 def addMap(filename, mapline):
