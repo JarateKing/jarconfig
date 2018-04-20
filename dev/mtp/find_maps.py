@@ -47,6 +47,7 @@ isErrorReporting = True
 isShowingMaps = True
 isPrinting = True
 isCounting = False
+timeout = 3
 args = iter(sys.argv[1:])
 
 for arg in args:
@@ -63,6 +64,9 @@ for arg in args:
         filename = _
     elif arg == "-help" or arg == "-h":
         printHelp()
+    elif arg == "-timeout":
+        _ = next(args)
+        timeout = float(_)
     else:
         print("Unknown argument: " + arg)
 
@@ -85,7 +89,7 @@ while True:
                 try:
 
                     # Given a server, find out what map it's running and append it
-                    with valve.source.a2s.ServerQuerier(address, 3) as server:
+                    with valve.source.a2s.ServerQuerier(address, timeout) as server:
                         info = server.info()
                         mapline = '"{map}.bsp" "1"'.format(**info)
                         if not mapline + '\n' in existing:
