@@ -42,3 +42,5 @@ It is worth noting as well, that in very specific cases involving hidden command
 // this breaks addcond and makes it unusable
 setinfo addcond ""
 ```
+
+Additionally, there is a limit of 255 player values, as set by setinfo. Any more than that will result in a crash when joining a server.
