@@ -35,7 +35,7 @@ for /D %%A in ("%repo_name%\*") do move /Y "%%~A" "%current_folder%"
 for /F %%A in ("%repo_name%\*") do move /Y "%%~A" "%current_folder%"
 :: remove folders and files used in the process
 rmdir /S /Q %repo_name%
-del master
+del master.zip
 :: return preserved files
 move "%current_folder%\custom.cfg" "%current_folder%\cfg\"
 move "%current_folder%\scout.cfg" "%current_folder%\cfg\"
