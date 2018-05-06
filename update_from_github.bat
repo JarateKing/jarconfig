@@ -29,10 +29,9 @@ move "%current_folder%\cfg\spy_c.cfg" "%current_folder%"
 :: download zip from github
 dev\wget.exe https://github.com/JarateKing/jarconfig/archive/master.zip --no-check-certificate
 :: extract zip
-dev\7z.exe x master -y
+dev\unzip.exe master.zip
 :: move folders and files out of jarconfig-master
-for /D %%A in ("%repo_name%\*") do move /Y "%%~A" "%current_folder%"
-for /F %%A in ("%repo_name%\*") do move /Y "%%~A" "%current_folder%"
+xcopy /SY "%repo_name%\*" "%current_folder%"
 :: remove folders and files used in the process
 rmdir /S /Q %repo_name%
 del master.zip
@@ -56,3 +55,4 @@ move "%current_folder%\pyro_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\medic_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\sniper_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\spy_c.cfg" "%current_folder%\cfg\"
+pause
