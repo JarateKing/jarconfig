@@ -4,7 +4,7 @@ These are programs and tools used by jarconfig to enable more functionality, or 
 
 ## Install programs
 
-7z.exe and wget.exe are used by the batch files to update and reinstall. Linux has equivalent programs natively installed, so the sh versions of the files do not require these .exe's.
+unzip.exe and wget.exe are used by the batch files to update and reinstall. Linux has equivalent programs natively installed, so the sh versions of the files do not require these .exe's.
 
 ## Mtp
 
