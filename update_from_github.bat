@@ -55,4 +55,3 @@ move "%current_folder%\pyro_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\medic_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\sniper_c.cfg" "%current_folder%\cfg\"
 move "%current_folder%\spy_c.cfg" "%current_folder%\cfg\"
-pause
