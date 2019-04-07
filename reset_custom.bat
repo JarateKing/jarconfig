@@ -11,7 +11,7 @@ dev\wget.exe https://github.com/JarateKing/jarconfig/archive/master.zip --no-che
 :: extract zip
 dev\unzip.exe master.zip
 :: move replaced cfgs out of jarconfig-master
-move "jarconfig-master\cfg\custom.cfg" "cfg"
+move "jarconfig-master\cfg\_settings.cfg" "cfg"
 move "jarconfig-master\cfg\scout.cfg" "cfg"
 move "jarconfig-master\cfg\soldier.cfg" "cfg"
 move "jarconfig-master\cfg\pyro.cfg" "cfg"

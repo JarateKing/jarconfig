@@ -8,7 +8,7 @@ wget https://github.com/JarateKing/jarconfig/archive/master.zip --no-check-certi
 # extract zip
 unzip master.zip
 # move replaced cfg out of jarconfig-master
-mv "./jarconfig-master/cfg/custom.cfg" "./cfg/custom.cfg"
+mv "./jarconfig-master/cfg/_settings.cfg" "./cfg/_settings.cfg"
 mv "./jarconfig-master/cfg/scout.cfg" "./cfg/scout.cfg"
 mv "./jarconfig-master/cfg/soldier.cfg" "./cfg/soldier.cfg"
 mv "./jarconfig-master/cfg/pyro.cfg" "./cfg/pyro.cfg"

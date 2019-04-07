@@ -7,7 +7,7 @@ SET "repo_name=jarconfig-master"
 TITLE Downloading Files from Github
 
 :: backup files to preserve
-move "%current_folder%\cfg\custom.cfg" "%current_folder%"
+move "%current_folder%\cfg\_settings.cfg" "%current_folder%"
 move "%current_folder%\cfg\scout.cfg" "%current_folder%"
 move "%current_folder%\cfg\soldier.cfg" "%current_folder%"
 move "%current_folder%\cfg\pyro.cfg" "%current_folder%"
@@ -36,7 +36,7 @@ xcopy /SY "%repo_name%\*" "%current_folder%"
 rmdir /S /Q %repo_name%
 del master.zip
 :: return preserved files
-move "%current_folder%\custom.cfg" "%current_folder%\cfg\"
+move "%current_folder%\_settings.cfg" "%current_folder%\cfg\"
 move "%current_folder%\scout.cfg" "%current_folder%\cfg\"
 move "%current_folder%\soldier.cfg" "%current_folder%\cfg\"
 move "%current_folder%\pyro.cfg" "%current_folder%\cfg\"
