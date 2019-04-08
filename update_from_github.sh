@@ -4,7 +4,7 @@
 # Modified by JarateKing
 
 # backup files to preserve
-mv "./cfg/custom.cfg" "./custom.cfg"
+mv "./cfg/_settings.cfg" "./_settings.cfg"
 mv "./cfg/scout.cfg" "./scout.cfg"
 mv "./cfg/soldier.cfg" "./soldier.cfg"
 mv "./cfg/pyro.cfg" "./pyro.cfg"
@@ -33,7 +33,7 @@ cp -rf "./jarconfig-master/." "."
 rm -rf "./jarconfig-master"
 rm -rf "./master.zip" 
 # return preserved files
-mv "./custom.cfg" "./cfg/custom.cfg"
+mv "./_settings.cfg" "./cfg/_settings.cfg"
 mv "./scout.cfg" "./cfg/scout.cfg"
 mv "./soldier.cfg" "./cfg/soldier.cfg"
 mv "./pyro.cfg" "./cfg/pyro.cfg"
