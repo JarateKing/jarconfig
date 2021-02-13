@@ -2,7 +2,7 @@
 
 Source scripting has no if statements, which are a basic backbone of most programming and scripting languages. This makes a lot of people confused and have no clue how to do anything advanced within tf2 scripts. Which is completely fair, since not using if statements is not intuitive in the slightest.
 
-Conditional logic can be done, however. Changing aliases allows for conditional logic (and in fact, is turing complete) with some effort. For example:
+Conditional logic can be done, however. Changing aliases allows for conditional logic (and in fact, is turing complete with the restriction of having a fixed memory size) with some effort. For example:
 
 ```
 // set up the boolean variable with a default value
